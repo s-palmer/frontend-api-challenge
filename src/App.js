@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import Peeps from "./components/Peeps";
 import Header from "./components/Header";
 import TimeAgo from 'javascript-time-ago'
-import en from 'javascript-time-ago/locale/en.json'
+import en from 'javascript-time-ago/locale/en-GB.json'
 import "./App.css";
+import AddPeep from "./components/AddPeep";
 
-TimeAgo.addDefaultLocale(en)
+TimeAgo.addDefaultLocale(en);
 
 function App() {
   const [peeps, setPeeps] = useState([]);
@@ -26,14 +27,18 @@ function App() {
       "https://chitter-backend-api-v2.herokuapp.com/peeps"
     );
     const data = await res.json();
-    console.log(data);
     return data;
   };
+
+  // const addPeep = async (peep) => {
+  //   const res = await fetch("")
+  // }
 
   return (
     <>
       <div className="container">
         <Header />
+        <AddPeep />
         <Peeps peeps={peeps}/>
       </div>
     </>
