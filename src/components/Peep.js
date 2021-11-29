@@ -1,6 +1,6 @@
 const Peep = ( {peep} ) => {
   return (
-    <div>
+    <div className="peep">
       <h3>{peep.body}</h3>
       <p>{peep.user.handle}</p>
     </div>

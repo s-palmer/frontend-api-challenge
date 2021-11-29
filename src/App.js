@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Peeps from "./components/Peeps";
+import Header from "./components/Header";
 import "./App.css";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
   return (
     <>
       <div className="container">
+        <Header />
         <Peeps peeps={peeps}/>
       </div>
     </>
