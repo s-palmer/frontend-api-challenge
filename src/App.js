@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import Peeps from "./components/Peeps";
 import Header from "./components/Header";
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en.json'
 import "./App.css";
+
+TimeAgo.addDefaultLocale(en)
 
 function App() {
   const [peeps, setPeeps] = useState([]);
